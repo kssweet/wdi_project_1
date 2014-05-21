@@ -1,0 +1,20 @@
+
+
+<h1>Today's News</h1>
+<ul>
+  
+  <% @articles.each do |subsection, section_articles| %>
+    <h2><%= subsection %></h2> 
+    <% section_articles.each do |article| %>
+      <h3><%= article[:title] %><h3>
+      <p> <%= article[:abstract] %></p>
+      <%= link_to "Find Out More About This Article", "/news/details" %>
+      <%= link_to "Read Article", article[:link] %>
+      <%= link_to "Search More On This Topic"  %>
+      <%= link_to "Save Article" article.save  %>
+    <% end %>
+  <% end %>
+
+</ul>
+
+
