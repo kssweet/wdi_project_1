@@ -2,6 +2,9 @@ class NewsController < ActionController::Base
 
   include NytimesHelper
 
+  def new
+  end
+
   def index
     @articles = NYTimes.retrieve_articles
   end
@@ -9,8 +12,7 @@ class NewsController < ActionController::Base
   def show
   end
 
-  def new
-    @articles = articles.new
-  end
+
+
 
 end

@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
 
-get 'sessions/new'
+  root to: "news#index"
 
-get "sign_up" => "users#new", :as => "signup"
-get "log_in" => "sessions#new", :as => "login"
-get "logout" => "sessions#destroy", :as => "logout"
 
-resources :users
-resources :sessions
+  get "sign_up", to: "users#new", as: "signup"
+  get "log_in", to: "sessions#new", as: "login"
+  get "logout", to: "sessions#destroy", as: "logout"
 
-root :to =>"news#index"
-resources :news
+
+  resources :users
+  resources :sessions
+
+  resources :news
 
 end
