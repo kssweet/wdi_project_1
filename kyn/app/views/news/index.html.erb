@@ -1,20 +1,48 @@
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,900,700' rel='stylesheet' type='text/css'>
 
 
-<h1>Today's News</h1>
-
+<body>
+<div class = "top">
+<h1>Know<br>Your<br>World</h1>
+</div>
 <ul>
-  
+
+  <div class = "nav">
+  <p class = "nav">|  AFRICA <br> |  MIDDLE EAST<br> |  ASIA PACIFIC <br>|  EUROPE <br>|  AMERICAS</p>
+</div>
+
   <% @articles.each do |subsection, section_articles| %>
-    <h2><%= subsection %></h2> 
+
+  <div class = "titles" >
+
+  <h2>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= subsection %></h2> 
+  </div>
+    
     <% section_articles.each do |article| %>
-      <h3><%= article[:title] %><h3>
-      <p> <%= article[:abstract] %></p>
-      <%= link_to "Read Article", article[:link] %>
-      <%= link_to "Search More On This Topic"  %>
-      <%= link_to "Save Article For Later" %> 
+      <h3><%= article[:title] %></h3>
+      <div class = "line"> </div>
+      <div class = "content">
+      <p class= "article"> <%= article[:abstract] %></p>
+      <li class = "list">
+
+      <%= link_to "|   Read Article", article[:link] %>
+      <%= link_to "|   Search This Topic"  %>
+      <%= link_to "|   Save Article For Later" %>
+
+      </li>
+      <div class = "line"> </div>
+    </div>
     <% end %>
   <% end %>
-
 </ul>
+
+
+</body>
 
 

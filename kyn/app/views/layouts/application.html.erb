@@ -1,13 +1,15 @@
 <!DOCTYPE html>
+
+<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+
 <html>
 <head>
-  <title>Know Your News</title>
+  <title>Know Your World</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h2>hello</h2>
 <header>
 <% if current_user %>
 Logged in as <%= current_user.email %>
