@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
 
-  resources :news
+  resources :newsindex
 
 end
