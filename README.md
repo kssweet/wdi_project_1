@@ -1,9 +1,9 @@
-wdi_project_1
+Know-Your-World
 =============
 NEWS AGGREGATOR: "Know Your World"
 
 
-DEPLOYED HERE!: http://cryptic-garden-1232.herokuapp.com/
+DEPLOYED HERE!: http://know-your-world.herokuapp.com
 
 
 
